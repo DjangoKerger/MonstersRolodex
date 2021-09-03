@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,29 +9,25 @@ class App extends Component {
     this.state = {
       monsters: [
         {
-          name: 'Frankenstein'
+          name: 'Frankenstein',
+          id:'abc'
         },
         {
-          name: 'Dracula'
+          name: 'Dracula',
+          id: 'cba'
         },
         {
-          name: 'Zombie'
+          name: 'Zombie',
+          id:'bca'
         },
       ]
     };
   }
 
   render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {this.state.string}
-        </p>
-        <button onClick={() => this.setState({ string: 'Hello Andrei'})}>
-        Change Text</button>
-      </header>
+    return (
+      <div className="App">
+        { this.state.monsters.map(monster => <h1> { monster.name } </h1>) }
     </div>
   );
 }
