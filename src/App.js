@@ -22,11 +22,8 @@ class App extends Component {
     return (
       
       <div className="App">
-        <CardList name="Django"> 
-        { this.state.monsters.map(monster => <h1> { monster.name } </h1>) }
-        </CardList>
-          
-    </div>
+        <CardList monsters={this.state.monsters} /> 
+      </div>
   );
 }
 }
